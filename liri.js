@@ -57,24 +57,22 @@ runLIRI();
 //     if (action === "do-what-it-says") {
 //         doWhat();
 //     }
-// };
+// }
 
 function runLIRI() {
-    
+
 
     switch (action) {
         case "movie-this":
-            if (search.length === 0) 
-            {
+            if (search.length === 0) {
                 search = ["Mr. Nobody"];
                 setUrls();
             }
             movieThis();
             break;
         case "spotify-this-song":
-            if (search.length === 0) 
-            {
-                search = ["The Sign"];
+            if (search.length === 0) {
+                search = ["The Sign The Ace of Base"];
                 setUrls();
             }
             spotifyThis();
@@ -93,13 +91,18 @@ function runLIRI() {
 function concertThis() {
     axios.get(band).then(
         function (response) {
-            // Name of the venue
-            console.log("Venue: " + response.data[0].venue.name);
-            // Venue location
-            console.log("Location: " + response.data[0].venue.city + ", " + response.data[0].venue.country);
-            // Date of the Event (use moment to format this as "MM/DD/YYYY")
-            var formatDate = moment(response.data[0].datetime).format("MM/DD/YYYY");
-            console.log("Date: " + formatDate);
+
+            for (let i = 0; i < 5; i++) {
+                console.log("===================")
+                // Name of the venue
+                console.log("Venue: " + response.data[i].venue.name);
+                // Venue location
+                console.log("Location: " + response.data[i].venue.city + ", " + response.data[0].venue.country);
+                // Date of the Event (use moment to format this as "MM/DD/YYYY")
+                var formatDate = moment(response.data[i].datetime).format("MM/DD/YYYY");
+                console.log("Date: " + formatDate);
+            };
+
         });
 };
 
@@ -120,10 +123,11 @@ function movieThis() {
             console.log("Country: " + response.data.Country);
             //   * Language of the movie.
             console.log("Languages: " + response.data.Language);
-            //   * Plot of the movie.
-            console.log("Plot: " + response.data.Plot);
             //   * Actors in the movie.
             console.log("Actors: " + response.data.Actors);
+            //   * Plot of the movie.
+            console.log("Plot: " + response.data.Plot);
+
         }
     )
 };
