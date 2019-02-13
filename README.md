@@ -35,7 +35,7 @@ Searching for a movie will result in listing the movie's release year, plot, rat
 ```
 node liri.js movie-this "The Emperor's New Groove"
 ```
-![Image of movie-this](https://octodex.github.com/images/movie-this.png)
+![Image of movie-this](images/movie-this.png)
 
 If the user does not supply a search LIRI will give the result for "Mr. Nobody" by default.
 
@@ -44,14 +44,14 @@ Searching for a band or artist will list the next 5 upcoming events for that art
 ```
 node liri.js concert-this "Ed Sheeran"
 ```
-![Image of concert-this](https://octodex.github.com/images/concert-this.png)
+![Image of concert-this](images/concert-this.png)
 
 ### Search Song
 Searching for the song will list the artist, name of the song, the album, and a link to spotify to preview the song. The command for this example will be:
 ```
 node liri.js spotify-this-song "Funky Town"
 ```
-![Image of spotify-this-song](https://octodex.github.com/images/spotify-this.png)
+![Image of spotify-this-song](images/spotify-this.png)
 
 If the user does no supply a search LIRI will give the result for "The Sign" by The Ace of Base by default.
 
@@ -60,4 +60,4 @@ LIRI has a special command to read from the random.txt file and run whatever the
 ```
 node liri.js do-what-it-says
 ```
-![Image of do-whatever-it-says](https://octodex.github.com/images/do-whatever.png)
+![Image of do-whatever-it-says](images/do-whatever.png)
